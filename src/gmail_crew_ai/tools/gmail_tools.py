@@ -269,12 +269,12 @@ class SaveDraftTool(BaseTool):
 
     def _format_body(self, body: str) -> str:
         """Format the email body with signature."""
-        # Replace [Your name] or [Your Name] with Tony Kipkemboi
-        body = re.sub(r'\[Your [Nn]ame\]', 'Tony Kipkemboi', body)
+        # Replace [Your name] or [Your Name] with Haadhi Irfan
+        body = re.sub(r'\[Your [Nn]ame\]', 'Haadhi Irfan', body)
         
         # If no placeholder was found, append the signature
         if '[Your' not in body and '[your' not in body:
-            body = f"{body}\n\nBest regards,\nTony Kipkemboi"
+            body = f"{body}\n\nBest regards,\nHaadhi Irfan"
         
         return body
 

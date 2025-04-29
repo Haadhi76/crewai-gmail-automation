@@ -28,11 +28,8 @@ categorization_task:
        - TASK
        - IGNORE
 
-    IMPORTANT YOUTUBE EMAIL RULES:
-    - ANY email from youtube.com domains MUST be categorized as YOUTUBE
-    - ANY email containing "YouTube" in the subject or sender MUST be categorized as YOUTUBE
-    - YouTube emails about comments should be HIGH priority but require READ_ONLY action
-      (the user will reply directly on YouTube, not via email)
+    IMPORTANT EMAIL RULES:
+    - ANY email with the words [Urgent, Important, confirm, approve, provide, reply, asap] MUST be categorized as HIGH
     
     IMPORTANT FORMAT INSTRUCTIONS:
     Your final answer must be a valid JSON object with these exact fields(example without the quotes):
@@ -63,8 +60,7 @@ organization_task:
     
     Simplified Label Rules:
     
-    1. For YOUTUBE emails:
-       - Add "YOUTUBE" label
+    1. For URGENT emails:
        - Star the email
        - If HIGH priority, also add "URGENT" label
     
@@ -143,7 +139,7 @@ notification_task:
     Use the 'SlackNotificationTool' with:
     - subject: The email subject
     - sender: The email sender
-    - category: The email category (YOUTUBE, PERSONAL, etc.)
+    - category: The email category (URGENT, PERSONAL, etc.)
     - priority: HIGH
     - summary: Your brief summary
     - action_needed: What action is needed
